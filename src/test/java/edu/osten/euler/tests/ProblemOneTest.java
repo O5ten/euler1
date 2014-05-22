@@ -19,13 +19,20 @@ public class ProblemOneTest {
 
     @Test
     public void shouldReturnThreeFiveSixAndNine(){
-        List<Integer> numbers = problem.listAllNaturalNumbersBelowTenThatAreMultiplesOfFiveAndthree();
+        List<Integer> numbers = problem.listAllNaturalNumbersBelowTenThatAreMultiplesOfFiveAndthree( 10 );
         assertThat( numbers, contains( 3, 5, 6, 9) );
     }
 
     @Test
     public void shouldSumToTwentyThree(){
-        List<Integer> numbers = problem.listAllNaturalNumbersBelowTenThatAreMultiplesOfFiveAndthree();
+        List<Integer> numbers = problem.listAllNaturalNumbersBelowTenThatAreMultiplesOfFiveAndthree( 10 );
         assertThat(problem.sum(numbers), is( 23));
+    }
+
+    @Test
+    public void answer(){
+        List<Integer> numbers = problem.listAllNaturalNumbersBelowTenThatAreMultiplesOfFiveAndthree( 1000 );
+        System.out.println("Problem 1: =======>" + problem.sum( numbers ) + "<======");
+        assertThat( problem.sum( numbers ), is( 266333 ) );
     }
 }

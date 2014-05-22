@@ -8,9 +8,9 @@ import java.util.List;
  */
 public class ProblemOne {
 
-    public List<Integer> listAllNaturalNumbersBelowTenThatAreMultiplesOfFiveAndthree(){
+    public List<Integer> listAllNaturalNumbersBelowTenThatAreMultiplesOfFiveAndthree( int limit ){
         ArrayList<Integer> list = new ArrayList();
-        for( int i = 0; i < 10; i++ ){
+        for( int i = 0; i < limit; i++ ){
             if( i == 0 )
                 continue;
 
