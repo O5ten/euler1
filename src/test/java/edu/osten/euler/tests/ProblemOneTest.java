@@ -33,6 +33,6 @@ public class ProblemOneTest {
     public void answer(){
         List<Integer> numbers = problem.listAllNaturalNumbersBelowTenThatAreMultiplesOfFiveAndthree( 1000 );
         System.out.println("Problem 1: =======>" + problem.sum( numbers ) + "<======");
-        assertThat( problem.sum( numbers ), is( 266333 ) );
+        assertThat( problem.sum( numbers ), is( 233168 ) );
     }
 }

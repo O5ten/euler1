@@ -10,16 +10,17 @@ public class ProblemOne {
 
     public List<Integer> listAllNaturalNumbersBelowTenThatAreMultiplesOfFiveAndthree( int limit ){
         ArrayList<Integer> list = new ArrayList();
-        for( int i = 0; i < limit; i++ ){
-            if( i == 0 )
+        for( int i = 1; i < limit; i++ ){
+
+            if( i % 3 == 0 ) {
+                list.add(i);
                 continue;
+            }
 
-            if( i % 3 == 0 )
-                list.add( i );
-
-            if( i % 5 == 0)
-                list.add( i );
-
+            if( i % 5 == 0) {
+                list.add(i);
+                continue;
+            }
         }
         return list;
     }
